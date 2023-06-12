@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Transform and Transition </title>
+</head>
+<style>
+body{
+padding: 80px;
+}
+.delay {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 3s;
+  transition-delay: 1s;
+}
+
+.delay:hover {
+  width: 300px;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+
+#div1 {transition-timing-function: linear;}
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in;}
+#div4 {transition-timing-function: ease-out;}
+#div5 {transition-timing-function: ease-in-out;}
+
+div:hover {
+  width: 300px;
+}
+
+.transition {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 4s;
+}
+
+.transition:hover {
+  width: 300px;
+  height: 300px;
+}
+pre{
+font-size: 1.7em;
+}
+h1{
+color: orangered;
+text-align: center;
+
+}
+div.a {
+  width: 150px;
+  height: 80px;
+  background-color: pink;
+  transform: rotate(20deg);
+}
+
+div.b {
+  width: 150px;
+  height: 80px;
+  background-color: pink;
+  transform: skewY(20deg);
+}
+
+div.c {
+  width: 150px;
+  height: 80px;
+  background-color: pink;
+  transform: scale(1.5);
+}
+
+div.d {
+  width: 150px;
+  height: 80px;
+  background-color: pink;
+  transform: translate(20px,30px);
+}
+</style>
+<body>
+<h1> CSS Transform and Transition </h1>
+
+
+<h1>The transform Property</h1>
+
+<h2>transform: rotate(20deg):</h2>
+<div class="a">Hello World!</div>
+<br>
+
+<h2>transform: skewY(20deg):</h2>
+<div class="b">Hello World!</div>
+<br>
+
+<h2>transform: scaleY(1.5):</h2>
+<div class="c">Hello World!</div>
+
+<h2>transform: translate(20px,30px):</h2>
+<div class="d">Hello World!</div>
+<pre>
+
+translate(x,y)	Defines a 2D translation
+	
+translate3d(x,y,z)	Defines a 3D translation
+	
+translateX(x)	Defines a translation, using only the value for the X-axis
+	
+translateY(y)	Defines a translation, using only the value for the Y-axis
+	
+translateZ(z)	Defines a 3D translation, using only the value for the Z-axis
+	
+scale(x,y)	Defines a 2D scale transformation
+	
+scale3d(x,y,z)	Defines a 3D scale transformation
+	
+scaleX(x)	Defines a scale transformation by giving a value for the X-axis	
+
+scaleY(y)	Defines a scale transformation by giving a value for the Y-axis	
+
+scaleZ(z)	Defines a 3D scale transformation by giving a value for the Z-axis	
+
+rotate(angle)	Defines a 2D rotation, the angle is specified in the parameter	
+
+rotate3d(x,y,z,angle)	Defines a 3D rotation	
+
+rotateX(angle)	Defines a 3D rotation along the X-axis
+	
+rotateY(angle)	Defines a 3D rotation along the Y-axis
+	
+rotateZ(angle)	Defines a 3D rotation along the Z-axis
+	
+skew(x-angle,y-angle)	Defines a 2D skew transformation along the X- and the Y-axis
+	
+skewX(angle)	Defines a 2D skew transformation along the X-axis
+	
+skewY(angle)	Defines a 2D skew transformation along the Y-axis
+
+</pre>	
+<h1>transition </h1>
+
+<pre style="color:blue">
+
+ease - specifies a transition effect with a slow start, 
+
+then fast, then end slowly (this is default)
+
+linear - specifies a transition effect with the same speed from start to end
+
+ease-in - specifies a transition effect with a slow start
+
+ease-out - specifies a transition effect with a slow end
+
+ease-in-out - specifies a transition effect with a slow start and end
+
+</pre>
+
+<h1>The transition Property</h1>
+
+<p>Hover over the div element below, to see the transition effect:</p>
+
+<div class="transition"></div>
+
+<h1>The transition-timing-function Property</h1>
+
+<p>Hover over the div elements below, to see the different speed curves:</p>
+
+<div id="div1">linear</div><br>
+<div id="div2">ease</div><br>
+<div id="div3">ease-in</div><br>
+<div id="div4">ease-out</div><br>
+<div id="div5">ease-in-out</div><br>
+
+<h1>The transition-delay Property</h1>
+
+<p>Hover over the div element below, to see the transition effect:</p>
+
+<div class="delay"></div>
+
+<p><b>Note:</b> The transition effect has a 1 second delay before starting.</p>
+
+
+</body>
+</html>
